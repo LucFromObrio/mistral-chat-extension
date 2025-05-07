@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Nebula Multi-Chat",
+  "version": "0.7",
+  "description": "Мульти-чати з live-форматуванням",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "sidePanel"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

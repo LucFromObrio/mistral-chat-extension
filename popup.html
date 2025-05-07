@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nebula Live-Format Chat</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- CHAT LIST PANEL -->
+  <div id="chatListPanel" class="panel open">
+    <header class="panel-header">
+      <h1 class="panel-title">Чати</h1>
+      <div class="header-actions">
+        <button id="sidePanelBtnList" class="icon-btn">
+          <span class="material-symbols-rounded">menu_open</span>
+        </button>
+        <button class="settings-btn icon-btn">
+          <span class="material-symbols-rounded">settings</span>
+        </button>
+      </div>
+    </header>
+    <div id="chatList" class="chat-list-body"></div>
+    <button id="newChatBtn" class="fab">
+      <span class="material-symbols-rounded">add</span>
+    </button>
+  </div>
+
+  <!-- MAIN CHAT PANEL -->
+  <div id="mainChatPanel" class="panel hidden">
+    <header class="panel-header">
+      <button id="backToListBtn" class="icon-btn">
+        <span class="material-symbols-rounded">arrow_back</span>
+      </button>
+      <h1 id="chatTitle" class="panel-title">Чат</h1>
+      <div class="header-actions">
+        <button id="detachBtn" class="icon-btn">
+          <span class="material-symbols-rounded">open_in_new</span>
+        </button>
+        <button id="sidePanelBtnChat" class="icon-btn">
+          <span class="material-symbols-rounded">menu_open</span>
+        </button>
+        <button class="settings-btn icon-btn">
+          <span class="material-symbols-rounded">settings</span>
+        </button>
+      </div>
+    </header>
+
+    <div id="history" class="history"></div>
+
+    <div class="inputBar">
+      <div class="textareaWrapper">
+        <!-- INLINE-TOOLBAR -->
+        <div class="formatBar">
+          <button class="format-btn" data-cmd="insertUnorderedList">
+            <span class="material-symbols-rounded">format_list_bulleted</span>
+          </button>
+          <button class="format-btn" data-cmd="bold"><b>B</b></button>
+          <button class="format-btn" data-cmd="italic"><i>I</i></button>
+          <button class="format-btn" data-cmd="underline"><u>U</u></button>
+        </div>
+
+        <!-- CONTENTEDITABLE INPUT -->
+        <div
+          id="userInput"
+          class="editor"
+          contenteditable="true"
+          placeholder="Введіть повідомлення…"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETTINGS PANEL -->
+  <div id="settingsPanel" class="panel hidden">
+    <header class="panel-header">
+      <button id="backFromSettingsBtn" class="icon-btn">
+        <span class="material-symbols-rounded">arrow_back</span>
+      </button>
+      <h1 class="panel-title">Налаштування</h1>
+    </header>
+    <div class="settings-body">
+      <label class="settings-label">
+        <span class="material-symbols-rounded">key</span>
+        <input id="apiKeyInput" type="text" placeholder="Ваш API-ключ" />
+      </label>
+      <button id="saveKeyBtn" class="primary-btn">Зберегти</button>
+    </div>
+  </div>
+
+  <script src="ui.js" defer></script>
+</body>
+</html>
