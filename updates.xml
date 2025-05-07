@@ -3,6 +3,6 @@
   <app appid="fmkkeigondgdfcknhhikchhohhgblohe">
     <updatecheck
       codebase="https://LucFromObrio.github.io/mistral-chat-extension/mistral-chat-extension.crx"
-      version="0.1"/>
+      version="0.7"/>
   </app>
 </gupdate>
