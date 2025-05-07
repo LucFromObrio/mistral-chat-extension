@@ -15,6 +15,7 @@
     "tabs",
     "sidePanel"
   ],
+  "update_url": "https://LucFromObrio.github.io/mistral-chat-extension/updates.xml",
   "background": {
     "service_worker": "service_worker.js"
   },
